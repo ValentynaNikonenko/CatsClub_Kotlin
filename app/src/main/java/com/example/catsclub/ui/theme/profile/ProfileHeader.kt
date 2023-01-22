@@ -22,7 +22,7 @@ import androidx.compose.foundation.layout.Column
 
 
 @Composable
-fun ProfileHeader (user: String) {
+fun ProfileHeader (user: User) {
     val padding = 16.dp
 
     Row(
@@ -78,7 +78,7 @@ fun ProfileHeaderPreview() {
     )
     CatsClubTheme {
         Surface {
-            ProfileHeader(user = user)
+            ProfileHeader(user = user) //edited
         }
     }
 }

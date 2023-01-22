@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.update
 class UsersViewModel: ViewModel() {
     val users = MutableStateFlow<List<User>>(emptyList())
 
-    fun  getById(id: String) = users.value.first { user -> user.id = id }
+    fun  getById(id: String) = users.value.first { user -> user.id == id }
 
     init {
         users.update {
@@ -102,5 +102,5 @@ class UsersViewModel: ViewModel() {
 
     }}
 
-private fun <User> List<User>.first(predicate: (User) -> Unit) { }
+ //private fun <User> List<User>.first(predicate: (User) -> Unit) { }
 

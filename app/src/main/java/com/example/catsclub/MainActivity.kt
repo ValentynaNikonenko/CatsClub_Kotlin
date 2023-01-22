@@ -49,10 +49,11 @@ fun MainScreen(viewModel: UsersViewModel) {
                 selectedId = user.id
             })
         }
-    //else { Profile (user = viewModel.getById(id))
-    // BackHandler {selectedId = null}}
+        else { Profile (user = viewModel.getById(id))
+         BackHandler {selectedId = null}
         }
-        }
+    }
+}
 
 
 
